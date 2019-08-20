@@ -1,7 +1,7 @@
 
 export  const products=[
       {   name:'iPhoneX',
-          price: 5001,
+          price: 5002,
           description: 'This is the tenth generation iPhone'             
     },
     
