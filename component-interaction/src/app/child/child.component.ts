@@ -12,7 +12,7 @@ export class ChildComponent  {
   private paramOneVal:any;
 
 
-  1111@Input() paramOne: any;//输入属性123
+  @Input() paramOne: any;//输入属性1
   @Input() paramTwo: any;//输入属性2
 
 }
