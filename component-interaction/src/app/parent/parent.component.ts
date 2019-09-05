@@ -2,14 +2,13 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-parent',
-  templateUrl: './parent.component.html',
-  styleUrls: ['./parent.component.css']
+  template: `<app-child [paramOne]='paramOneVal'  [paramTwo]='paramTwoVal'></app-child>`,
+  //styleUrls: ['./parent.component.css']
 })
-export class ParentComponent implements OnInit {
+export class ParentComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+      paramOneVal: any='传递给paramOne的数据';
+      paramTwoVal: any='传递给paramTwo的数据'；
+  
 
 }
