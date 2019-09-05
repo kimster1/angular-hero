@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChange } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -8,11 +8,32 @@ import { Component, OnInit, Input } from '@angular/core';
   `,
  // styleUrls: ['./child.component.css']
 })
-export class ChildComponent  {
+export class ChildComponent implements OnChanges {
   private paramOneVal:any;
 
 
-  @Input() paramOne: any;//输入属性1
-  @Input() paramTwo: any;//输入属性2
+  @Input() 
+  set paramOne(val:any){
+    this.paramOneVal=val;
+  }；
+  get paramOne(){
+    return this.paramOneVal;
+  }
+
+  @Input () paramTwo : any;
+
+  ngOnChanges(changes:{[proKey:string]:SimpleChange}){
+     for(let propName in changes){
+        let changeProp=changes[propName];
+        let to = JSON.stringify(changeProp.currentValue);
+        if(changedProp.isFirstChange()){
+             console.log(`Initial value of ${propName} set to ${to}`);
+
+        }else{
+            let from=JSON.stringify(changedProp.previousValue);
+            console.log(`${propName}changed from ${from} to ${to}`);
+        }
+     }
+  }
 
 }
