@@ -1,0 +1,4 @@
+<div *ngFor="let product of products; index as productId">
+   <p ><a [routerLink]="['/products',productId]">{{product.name}}</a></p>
+</div>
+
