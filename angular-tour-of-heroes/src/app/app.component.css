@@ -4,17 +4,17 @@ h1 {
  margin-bottom: 0;
 }
 h2 {
- font-size: 2em;
+ font-size: 3em;
  margin-top: 0;
  padding-top: 0;
 }
 nav a {
- padding: 5px 10px;
+ padding: 5px 11px;
  text-decoration: none;
  margin-top: 10px;
  display: inline-block;
  background-color: #eee;
- border-radius: 4px;
+ border-radius: 5px;
 }
 nav a:visited, a:link {
  color: #334953;
